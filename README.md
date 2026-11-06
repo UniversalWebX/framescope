@@ -1,4 +1,4 @@
-# imadamnduck
+# made by imadamnduck
 
 A Geode mod for Geometry Dash 2.2091.
 
@@ -8,7 +8,7 @@ The mod adds a compact live HUD and a custom pause-menu dashboard. It records pl
 
 The value shown is an **interaction-edge estimate**, not a mathematically exact physics window. It uses ground/slope, ring-contact, gravity, rotation, death, and jump-buffer state changes as timing boundaries. This is useful as a live timing inspector, but it does not prove how many alternate input ticks would still complete the level.
 
-For exact measured windows, the established method is to record a successful run and replay it while moving one input earlier and later, one logic tick at a time, checking whether the level still completes. The separate MIT-licensed [Frame Window Lab](https://github.com/ImKubuuss/framecounterv2) project implements that replay scan for its original Geode 5.10.1 / Geometry Dash 2.2081 target. Its replay/scanning engine has **not** been ported into this 2.2091 nightly project; don't interpret imadamnduck's estimates as that level of measurement.
+For exact measured windows, the established method is to record a successful run and replay it while moving one input earlier and later, one logic tick at a time, checking whether the level still completes. The separate MIT-licensed [Frame Window Lab](https://github.com/ImKubuuss/framecounterv2) project implements that replay scan for its original Geode 5.10.1 / Geometry Dash 2.2081 target. Its replay/scanning engine has **not** been ported into this 2.2091 nightly project; don't interpret framescope's estimates as that level of measurement.
 
 The counter uses a 240-tick baseline and reports buckets:
 
@@ -48,15 +48,8 @@ $env:GEODE_SDK = "C:\GeodeSDK\geode-v6"
 geode build
 ```
 
-Pushing this repo to GitHub starts the Windows build workflow in `.github/workflows/build.yml`.
 
-## Install
-
-Copy the generated `imadamnduck.framescope.geode` into your Geometry Dash Geode mods folder, then restart Geometry Dash. The pause-menu `DUCK` button opens the dashboard.
-
-## Links
-
-The Geode build layout follows the official Geode template and build action. Some ideas for the HUD and counters came from open-source frame-window projects, including [AutoFPCounter](https://github.com/novabot-dev/AutoFPCounter), [Frame Tracker](https://github.com/lightningstudiosx/frame_inspector), and [Frame Window Lab](https://github.com/ImKubuuss/framecounterv2). No source files, art, or audio from those projects are bundled here. Frame Window Lab is linked as a reference for the more rigorous replay-scan approach; its code is not included in imadamnduck.
+The Geode build layout follows the official Geode template and build action. Some ideas for the HUD and counters came from open-source frame-window projects, including [AutoFPCounter](https://github.com/novabot-dev/AutoFPCounter), [Frame Tracker](https://github.com/lightningstudiosx/frame_inspector), and [Frame Window Lab](https://github.com/ImKubuuss/framecounterv2). No source files, art, or audio from those projects are bundled here. Frame Window Lab is linked as a reference for the more rigorous replay-scan approach; its code is not included in framescope.
 
 ## Known limitations
 
