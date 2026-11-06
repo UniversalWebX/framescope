@@ -1,0 +1,28 @@
+name: Build imadamnduck
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build Geode mod
+        id: build
+        uses: geode-sdk/build-geode-mod@main
+        with:
+          sdk: nightly
+          cli: latest
+          target: Win64
+          build-config: RelWithDebInfo
+
+      - name: Upload .geode artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: imadamnduck.framescope-Windows-2.2091-Nightly
+          path: ${{ steps.build.outputs.build-output }}

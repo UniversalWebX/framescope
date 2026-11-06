@@ -1,0 +1,35 @@
+{
+  "geode": "6.0.0-alpha.1",
+  "gd": {
+    "win": "2.2091"
+  },
+  "id": "imadamnduck.framescope",
+  "name": "imadamnduck",
+  "version": "v0.1.0",
+  "developer": "imadamnduck",
+  "description": "Live frame-window inspector with automatic interaction-edge counters and a custom pause-menu dashboard. Window widths are estimates based on sampled player-state boundaries.",
+  "tags": [
+    "gameplay",
+    "utility"
+  ],
+  "settings": {
+    "show-hud": {
+      "type": "bool",
+      "default": true,
+      "name": "Show live HUD",
+      "description": "Display the compact frame-window counter during a level."
+    },
+    "show-markers": {
+      "type": "bool",
+      "default": true,
+      "name": "Show input markers",
+      "description": "Draw coloured dots at recent input positions."
+    },
+    "count-releases": {
+      "type": "bool",
+      "default": false,
+      "name": "Count releases",
+      "description": "Include relevant button-release events as well as presses."
+    }
+  }
+}
