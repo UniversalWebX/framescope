@@ -566,9 +566,9 @@ private:
 
 // Take a sample after each physics step.
 class $modify(DuckPlayLayer, PlayLayer) {
-    bool init(GJGameLevel* level, bool useReplay, bool dontCreateObjects) {
-        if (!PlayLayer::init(level, useReplay, dontCreateObjects)) return false;
-        if (!useReplay) imadamnduck::Tracker::get().attach(this);
+    bool init(GJGameLevel* level, bool dontCreateObjects) {
+        if (!PlayLayer::init(level, dontCreateObjects)) return false;
+        imadamnduck::Tracker::get().attach(this);
         return true;
     }
 
